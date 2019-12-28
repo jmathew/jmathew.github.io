@@ -1,8 +1,22 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Cormorant:300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300|Amiko|EB+Garamond|Lato:300|Open+Sans:300|Rasa&display=swap" rel="stylesheet">
+
         <style type="text/css">
+            body {
+                --blurb-font: 'Alegreya Sans SC', serif;
+                --title-font: 'EB Garamond', serif;
+                --highlight-color: #F23043;
+                --background-color: #FFFBFC;
+                --default-text-color: #141204;
+                --card-color: #FFFBFC;
+                --link-color: #2CA8DD;
+
+                background-color: var(--background-color);
+                color: var(--default-text-color);
+            }
+
             .container {
                 /* Content */
                 display: flex;
@@ -17,11 +31,10 @@
                 left: 0;
                 padding:  0;
                 margin: 0;
-
-                font-family: 'Cormorant', serif;
             }
             .box {
                 display: flex;
+                background-color: var(--card-color);
             }
             .identity {
                 display: flex;
@@ -33,6 +46,8 @@
                 padding-bottom: .1em;
                 font-style: italic;
                 white-space: nowrap;
+
+                font-family: var(--title-font);
             }
             .name {
                 font-size: 3em;
@@ -43,6 +58,16 @@
                 justify-content: center;
                 font-size: 1.5em;
                 width: 300px;
+
+                font-family: var(--blurb-font);
+            }
+
+            .highlight {
+                color: var(--highlight-color);
+            }
+
+            .link {
+                color: var(--link-color);
             }
         </style>
     </head>
@@ -51,10 +76,10 @@
             <div class="identity">
                 <div class="name">Jeff Mathew</div>
                 <div class="title">Contract Software Developer</div>
-                <div class="thing"><a href="mailto:jeff@jeffmathew.com">jeff@jeffmathew.com</a></div>
+                <div class="thing"><a class="link" href="mailto:jeff@jeffmathew.com" target="_blank">jeff@jeffmathew.com</a></div>
             </div>
             <div class="blurb">
-                <div>A full stack developer building dynamic apps and websites powered by reusable APIs in DC, Maryland.</div>
+                <div>Full stack developer building <b class="highlight">dynamic</b> apps and websites powered by <b class="highlight">reusable</b> APIs in DC, Maryland.</div>
             </div>
         </div>
     </body>

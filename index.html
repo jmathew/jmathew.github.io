@@ -7,7 +7,8 @@
             body {
                 --blurb-font: 'Alegreya Sans SC', serif;
                 --title-font: 'EB Garamond', serif;
-                --highlight-color: #F23043;
+                --quality-highlight: #F23043;
+                --build-highlight: #120049;
                 --background-color: #FFFBFC;
                 --default-text-color: #141204;
                 --card-color: #FFFBFC;
@@ -62,8 +63,15 @@
                 font-family: var(--blurb-font);
             }
 
-            .highlight {
-                color: var(--highlight-color);
+            .quality-highlight {
+                color: var(--quality-highlight);
+            }
+
+            .build-highlight {
+                color: white;
+                background-color: black;
+                font-size: .9em;
+                padding: 0em .15em;
             }
 
             .link {
@@ -71,13 +79,19 @@
             }
 
             /* Stacked format for smaller screens */
-            @media all and (max-width: 635px){
+            @media 
+                /* For devices. */
+                all and (max-device-width: 635px), 
+                /* For smaller desktop windows. */
+                all and (max-width: 635px) 
+            {
                 .box {
                     flex-direction: column;
                 }
 
                 .identity {
                     align-items: center;
+                    margin-bottom: 1em;
                 }
             }
         </style>
@@ -90,7 +104,7 @@
                 <div class="thing"><a class="link" href="mailto:jeff@jeffmathew.com" target="_blank">jeff@jeffmathew.com</a></div>
             </div>
             <div class="blurb">
-                <div>Full stack developer building <b class="highlight">dynamic</b> apps and websites powered by <b class="highlight">reusable</b> APIs in DC, Maryland.</div>
+                <div>Full stack developer building <b class="quality-highlight">dynamic</b> <b class="build-highlight">apps</b> and <b class="build-highlight">websites</b> powered by <b class="quality-highlight">reusable</b> <b class="build-highlight">APIs</b> in DC, Maryland.</div>
             </div>
         </div>
     </body>

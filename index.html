@@ -79,8 +79,8 @@
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: center;
+                align-items: flex-start;
                 font-size: 1.5em;
-                width: 300px;
 
                 font-family: var(--blurb-font);
 
@@ -127,8 +127,7 @@
                     border-left: none;
                     padding-left: 0px;
 
-                    /* Must use this instead of flex because of mixed elements in blurb. */
-                    text-align: center;
+                    align-items: center;
                 }
             }
         </style>
@@ -141,7 +140,9 @@
                 <div class="thing"><a class="link" href="mailto:jeff@jeffmathew.com" target="_blank">jeff@jeffmathew.com</a></div>
             </div>
             <div class="blurb">
-                <div>Full stack developer building <span class="quality-highlight">dynamic</span> <span class="build-highlight">apps</span> and <span class="build-highlight">websites</span> powered by <span class="quality-highlight">reusable</span> <span class="build-highlight">APIs</span>.</div>
+                    <div>Full stack developer building</div>
+                    <div><span class="quality-highlight">dynamic</span> <span class="build-highlight">apps</span> and <span class="build-highlight">websites</span></div> 
+                    <div>powered by <span class="quality-highlight">reusable</span> <span class="build-highlight">APIs</span>.</div>
             </div>
         </div>
     </body>

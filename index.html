@@ -18,6 +18,16 @@
                 
                 background-color: var(--background-color);
                 color: var(--default-text-color);
+
+            }
+
+            @keyframes fadin {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 100;
+                }
             }
 
             .container {
@@ -34,6 +44,8 @@
                 left: 0;
                 padding:  0;
                 margin: 0;
+
+                animation: fadin 1.75s ease-out 0s normal 1 none running;
             }
             .box {
                 display: flex;

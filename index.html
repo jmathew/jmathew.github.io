@@ -69,6 +69,17 @@
             .link {
                 color: var(--link-color);
             }
+
+            /* Stacked format for smaller screens */
+            @media all and (max-width: 635px){
+                .box {
+                    flex-direction: column;
+                }
+
+                .identity {
+                    align-items: center;
+                }
+            }
         </style>
     </head>
     <body class="container">

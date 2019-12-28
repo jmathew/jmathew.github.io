@@ -15,7 +15,7 @@
                 --default-text-color: #141204;
 
                 --link-color: #2CA8DD;
-
+                
                 background-color: var(--background-color);
                 color: var(--default-text-color);
             }
@@ -43,6 +43,9 @@
                 flex-flow: column wrap;
                 align-items: flex-end;
                 margin-right: 1em;
+
+                /* Lift the link above the baseline. */
+                padding: .3em;
             }
             .title {
                 padding-bottom: .1em;
@@ -50,9 +53,15 @@
                 white-space: nowrap;
 
                 font-family: var(--title-font);
+
+                /* Adjust for font choice */
+                margin-top: -.5em;
             }
             .name {
                 font-size: 3em;
+
+                /* Adjust for font choice */
+                margin-top: -.25em;
             }
             .blurb {
                 display: flex;
@@ -62,10 +71,15 @@
                 width: 300px;
 
                 font-family: var(--blurb-font);
+
+                /* Middle line. */
+                border-left: 1px solid black;
+                padding-left: .5em;
             }
 
             .quality-highlight {
                 color: var(--quality-highlight);
+                font-weight: bold;
             }
 
             .build-highlight {
@@ -73,6 +87,7 @@
                 background-color: black;
                 font-size: .9em;
                 padding: 0em .15em;
+                font-weight: bold;
             }
 
             .link {
@@ -94,6 +109,15 @@
                     align-items: center;
                     margin-bottom: 1em;
                 }
+
+                .blurb {
+                    /* Remove line */
+                    border-left: none;
+                    padding-left: 0px;
+
+                    /* Must use this instead of flex because of mixed elements in blurb. */
+                    text-align: center;
+                }
             }
         </style>
     </head>
@@ -105,7 +129,7 @@
                 <div class="thing"><a class="link" href="mailto:jeff@jeffmathew.com" target="_blank">jeff@jeffmathew.com</a></div>
             </div>
             <div class="blurb">
-                <div>Full stack developer building <b class="quality-highlight">dynamic</b> <b class="build-highlight">apps</b> and <b class="build-highlight">websites</b> powered by <b class="quality-highlight">reusable</b> <b class="build-highlight">APIs</b>.</div>
+                <div>Full stack developer building <span class="quality-highlight">dynamic</span> <span class="build-highlight">apps</span> and <span class="build-highlight">websites</span> powered by <span class="quality-highlight">reusable</span> <span class="build-highlight">APIs</span>.</div>
             </div>
         </div>
     </body>

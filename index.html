@@ -15,6 +15,9 @@
                 --default-text-color: #141204;
 
                 --link-color: #2CA8DD;
+
+                /* The min overall size of the smallest layout available (ie the stacked layout) */
+                --min-width: 365px;
                 
                 background-color: var(--background-color);
                 color: var(--default-text-color);
@@ -51,6 +54,9 @@
                 display: flex;
                 flex-direction: row;
 
+                font-size: 1.25em;
+                
+                min-width: var(--min-width);
             }
             .identity {
                 display: flex;
@@ -113,9 +119,9 @@
             /* Stacked format for smaller screens */
             @media 
                 /* For devices. */
-                all and (max-device-width: 635px), 
+                all and (max-device-width: 715px), 
                 /* For smaller desktop windows. */
-                all and (max-width: 635px) 
+                all and (max-width: 715px) 
             {
                 .box {
                     flex-direction: column;
@@ -137,7 +143,7 @@
 
             @media
                 /* Smaller high density displays get increased font size. See http://dpi.lv/ */
-                screen and (max-device-width: 635px) and (min-resolution: 330dpi)
+                screen and (max-device-width: 715px) and (min-resolution: 330dpi)
             {
                 .box {
                     font-size: 2em;

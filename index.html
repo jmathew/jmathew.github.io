@@ -49,12 +49,16 @@
             }
             .box {
                 display: flex;
+                flex-direction: row;
+
             }
             .identity {
                 display: flex;
                 flex-flow: column wrap;
                 align-items: flex-end;
                 margin-right: 1em;
+                margin-bottom: 0;
+
 
                 /* Lift the link above the baseline. */
                 padding: .3em;
@@ -105,7 +109,7 @@
             .link {
                 color: var(--link-color);
             }
-
+            
             /* Stacked format for smaller screens */
             @media 
                 /* For devices. */
@@ -135,12 +139,8 @@
                 /* Smaller high density displays get increased font size. See http://dpi.lv/ */
                 screen and (max-device-width: 635px) and (min-resolution: 330dpi)
             {
-                .name {
-                    font-size: 6em;
-                }
-
-                .blurb {
-                    font-size: 3em;
+                .box {
+                    font-size: 2em;
                 }
             }
         </style>
@@ -150,7 +150,7 @@
             <div class="identity">
                 <div class="name">Jeff Mathew</div>
                 <div class="title">Contract Software Developer</div>
-                <div class="thing"><a class="link" href="mailto:jeff@jeffmathew.com" target="_blank">jeff@jeffmathew.com</a></div>
+                <div class="contact"><a class="link" href="mailto:jeff@jeffmathew.com" target="_blank">jeff@jeffmathew.com</a></div>
             </div>
             <div class="blurb">
                     <div>Full stack developer building</div>

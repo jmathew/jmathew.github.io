@@ -130,6 +130,19 @@
                     align-items: center;
                 }
             }
+
+            @media
+                /* Smaller high density displays get increased font size. See http://dpi.lv/ */
+                screen and (max-device-width: 635px) and (min-resolution: 330dpi)
+            {
+                .name {
+                    font-size: 6em;
+                }
+
+                .blurb {
+                    font-size: 3em;
+                }
+            }
         </style>
     </head>
     <body class="container">

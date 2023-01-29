@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="about:blank">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300|EB+Garamond&display=swap" rel="stylesheet">
+        <style type="text/css">
+            body {
+                --blurb-font: 'Alegreya Sans SC', serif;
+                --title-font: 'EB Garamond', serif;
+                
+                --quality-highlight: #F23043;
+                --build-highlight: #120049;
+                --background-color: #f8f9e6;
+
+                --default-text-color: #141204;
+
+                --link-color: #2CA8DD;
+
+                /* The min overall size of the smallest layout available (ie the stacked layout) */
+                --min-width: 365px;
+                
+                background-color: var(--background-color);
+                color: var(--default-text-color);
+
+            }
+
+            @keyframes fadin {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 100;
+                }
+            }
+
+            .container {
+                /* Content */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+
+                /* Self */
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                padding:  0;
+                margin: 0;
+
+                animation: fadin 1.75s ease-out 0s normal 1 none running;
+            }
+            .box {
+                display: flex;
+                flex-direction: row;
+
+                font-size: 1.25em;
+                
+                min-width: var(--min-width);
+            }
+            .identity {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: flex-end;
+                margin-right: 1em;
+                margin-bottom: 0;
+
+
+                /* Lift the link above the baseline. */
+                padding: .3em;
+            }
+            .title {
+                padding-bottom: .1em;
+                font-style: italic;
+                white-space: nowrap;
+
+                font-family: var(--title-font);
+
+                /* Adjust for font choice */
+                margin-top: -.5em;
+            }
+            .name {
+                font-size: 3em;
+
+                /* Adjust for font choice */
+                margin-top: -.25em;
+            }
+            .blurb {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: flex-start;
+                font-size: 1.5em;
+
+                font-family: var(--blurb-font);
+
+                /* Middle line. */
+                border-left: 1px solid black;
+                padding-left: .5em;
+            }
+
+            .quality-highlight {
+                color: var(--quality-highlight);
+                font-weight: bold;
+            }
+
+            .build-highlight {
+                color: white;
+                background-color: black;
+                font-size: .9em;
+                padding: 0em .15em;
+                font-weight: bold;
+            }
+
+            .link {
+                color: var(--link-color);
+            }
+            
+            /* Stacked format for smaller screens */
+            @media 
+                /* For devices. */
+                all and (max-device-width: 715px), 
+                /* For smaller desktop windows. */
+                all and (max-width: 715px) 
+            {
+                .box {
+                    flex-direction: column;
+                }
+
+                .identity {
+                    align-items: center;
+                    margin-bottom: 1em;
+                }
+
+                .blurb {
+                    /* Remove line */
+                    border-left: none;
+                    padding-left: 0px;
+
+                    align-items: center;
+                }
+            }
+
+            @media
+                /* Smaller high density displays get increased font size. See http://dpi.lv/ */
+                screen and (max-device-width: 715px) and (min-resolution: 330dpi)
+            {
+                .box {
+                    font-size: 2em;
+                }
+            }
+        </style>
+    </head>
+    <body class="container">
+        <div class="box">
+            <div class="identity">
+                <div class="name">Jeff Mathew</div>
+                <div class="title">Contract Software Developer</div>
+                <div class="contact"><a class="link" href="mailto:jeff@jeffmathew.com" target="_blank">jeff@jeffmathew.com</a></div>
+            </div>
+            <div class="blurb">
+                    <div>Full stack developer building</div>
+                    <div><span class="quality-highlight">dynamic</span> <span class="build-highlight">apps</span> and <span class="build-highlight">websites</span></div> 
+                    <div>powered by <span class="quality-highlight">reusable</span> <span class="build-highlight">APIs</span>.</div>
+            </div>
+        </div>
+    </body>
+</html>

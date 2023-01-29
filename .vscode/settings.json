@@ -2,5 +2,11 @@
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#703",
     "titleBar.activeForeground": "#FFFFFF"
-  }
+  },
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

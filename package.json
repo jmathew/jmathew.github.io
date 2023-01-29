@@ -1,0 +1,31 @@
+{
+  "name": "jmathew.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmathew/jmathew.github.io.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jmathew/jmathew.github.io/issues"
+  },
+  "homepage": "https://github.com/jmathew/jmathew.github.io#readme",
+  "volta": {
+    "node": "18.13.0",
+    "yarn": "3.3.1"
+  },
+  "dependencies": {
+    "esbuild": "^0.17.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.4"
+  }
+}
